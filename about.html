@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .ball {
+            width: 50px;
+            height: 50px;
+            background-color: #3498db;
+            border-radius: 50%;
+            position: relative;
+            left:0;
+            
+            animation-name: moveRight ;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes moveRight {
+            to {
+                left: calc(100% - 50px);
+            }
+        }
+        .box {
+        padding: 20px;
+        background-color: #3498db;
+        color: white;
+        font-size: 16px;
+        animation: changeColor 2s ease-in-out 1s infinite alternate both;
+    }
+    @keyframes changeColor {
+        0% {
+            background-color: #3498db;
+        }
+        100% {
+            background-color: #e74c3c;
+        }
+    }
+    body{
+        background-color:grey
+    }
+    </style>
+</head>
+
+<body>
+    <a href="dashboard.html"><button style="color:yellow;background-color:blue">Go To Home Page</button></a>
+    <div class="ball" 
+         style="animation-direction: normal; ">
+    </div>
+
+    <center><h2> <div class="box">This Website is Made By Ankan Das</div></h2></center>
+    <div class="ball" 
+         style="animation-direction: reverse;">
+    </div>
+    <br>
+    <center>
+    <div class="card" style="width: 18rem; background-color:aliceblue">
+  <img src="image/img_1.png" class="card-img-top" alt="photo" width="268" height="268">
+  <div class="card-body">
+    <p class="card-text">Hi! everyone I hope all of you very well.This website I basically made for those students who finds notes before exam
+        and make their preparation strong. </p>
+  </div>
+</div>
+    </center>
+
+</body>
+</html>
