@@ -1,81 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Login Page</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<title>IIT Madras Resource Page</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <style>
-        body {
-            margin: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            font-family: Arial, sans-serif;
-        }
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
-        .login-box {
-            background: white;
-            padding: 30px;
-            width: 320px;
-            border-radius: 10px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-        }
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont;
+}
 
-        .login-box h2 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
+body {
+  height: 100vh;
+  overflow: hidden;
+  color: white;
+  background: radial-gradient(circle at bottom, #6f5cff, #0a0f2c 60%);
+}
 
-        .login-box input {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
+.creator {
+  text-align: center;
+  margin-top: 20px;
+}
 
-        .login-box button {
-            width: 100%;
-            padding: 10px;
-            background: #667eea;
-            border: none;
-            color: white;
-            font-size: 16px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
+.creator div {
+  display: inline-block;
+  padding: 15px 25px;
+  background: linear-gradient(90deg, #3498db, #9b59b6);
+  border-radius: 12px;
+  animation: glow 2s infinite alternate;
+}
 
-        .login-box button:hover {
-            background: #5a67d8;
-        }
+@keyframes glow {
+  from { opacity: 0.8; }
+  to { opacity: 1; }
+}
 
-        .login-box p {
-            text-align: center;
-            margin-top: 15px;
-        }
 
-        .login-box a {
-            color: #667eea;
-            text-decoration: none;
-        }
-    </style>
+.hero {
+  text-align: center;
+  padding-top: 100px;
+}
+
+.hero h1 {
+  font-size: 52px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  opacity: 0.85;
+  max-width: 650px;
+  margin: auto;
+}
+
+.buttons {
+  margin-top: 30px;
+}
+
+
+.float {
+  position: absolute;
+  bottom: 80px;
+  animation: float 6s ease-in-out infinite;
+}
+
+.circle {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.pink {
+  background: #ff6bd6;
+  left: 40%;
+}
+
+.purple {
+  background: #8b7bff;
+  left: 50%;
+  animation-delay: 1s;
+}
+
+.yellow {
+  background: #ffc83d;
+  left: 60%;
+  animation-delay: 2s;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-30px); }
+  100% { transform: translateY(0); }
+}
+</style>
 </head>
+
 <body>
 
-<div class="login-box">
-    <h2>Login</h2>
+<div class="creator">
+  <div>This Website is Made By <strong>Ankan Das</strong></div>
+</div>
 
-    <form action="dashboard.html">
-        <input type="text" placeholder="Full name" required>
-        <input type="email" placeholder="Email" required>
-        <input type="password" placeholder="Password" required>
+<section class="hero">
+  <h1>Welcome to IIT Madras<br>Resource Page</h1>
 
-        <button type="submit">Submit</button>
-    </form>
+  <p>
+    Before accessing the notes, please visit the help page
+    and read the instructions carefully.
+  </p>
 
+  <div class="buttons">
+    <a class="btn btn-success me-2" href="dashboard.html">Go To Notes</a>
+    <a class="btn btn-outline-light" href="help.html">Help</a>
+  </div>
+
+ 
+  <div class="float circle pink">IITM</div>
+  <div class="float circle purple">BS</div>
+  <div class="float circle yellow">Resources</div>
+</section>
 
 </body>
 </html>
